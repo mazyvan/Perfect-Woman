@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var toggles = toArray(toggleList);
   toggles.forEach(function(toggle) {
     toggle.onclick = onClick;
+    toggle.checked = false;
   })
 
   // check all but one toggle on load
