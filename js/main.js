@@ -1,30 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var toggleList = document.getElementsByClassName('cmn-toggle');
+  var toggleList = document.getElementsByClassName("cmn-toggle");
   var toggles = toArray(toggleList);
   toggles.forEach(function(toggle) {
     toggle.onclick = onClick;
     toggle.checked = false;
-  })
+  });
 
   // check all but one toggle on load
   setTimeout(function () {
-    shuffle(toggles)
+    shuffle(toggles);
     for (var i = 1; i < toggles.length; i++) {
-      toggles[i].checked = true
-    }
+      toggles[i].checked = true;
+    };
   }, 100);
 
 
   function onClick(e) {
     // get all checked toggle switches
     var togglesChecked = toggles.filter(function(toggle) {
-      return toggle.checked
+      return toggle.checked;
     })
 
     if (togglesChecked.length === toggles.length) {
       // don't uncheck last clicked
       togglesChecked = togglesChecked.filter(function(toggle) {
-        return toggle !== e.target
+        return toggle !== e.target;
       })
 
       // uncheck random remaining toggle
@@ -43,8 +43,8 @@ function toArray(obj) {
 }
 
 function shuffle(a) {
-  for (let i = a.length; i; i--) {
-    let j = Math.floor(Math.random() * i);
+  for (var i = a.length; i; i--) {
+    var j = Math.floor(Math.random() * i);
     [a[i - 1], a[j]] = [a[j], a[i - 1]];
   }
 }
