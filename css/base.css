@@ -84,6 +84,7 @@ body {
 
 main {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -92,6 +93,7 @@ main {
 
 footer {
   padding: 1em;
+  flex-shrink: 0;
   font-size: 1.5em;
 }
 
@@ -119,6 +121,7 @@ a:hover {
 .switch-group {
   margin: 1.5em;
   display: flex;
+  flex-shrink: 0;
   width: 250px;
   align-items: center;
   justify-content: flex-start;
